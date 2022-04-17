@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Zecurion — Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    @@include("source/html/base/header.html", {
+      "index": false
+    })
+
+    <main>
+      <div class="breadcrumbs">
+        <ul class="container text breadcrumbs__list list-reset">
+          <li>
+            <a href="#">Сотрудники</a>
+          </li>
+          <li>
+            Виктория Беляева, belyaeva@companyname
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <aside class="employees">
+          <div class="employees__search">
+            <div class="container">
+              <label class="text" for="search">
+                <input type="text" name="search" placeholder="Быстрый поиск...">
+              </label>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </main>
+
+  </div>
+</body>
+</html>

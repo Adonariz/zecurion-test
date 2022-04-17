@@ -1,0 +1,54 @@
+.employees {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 1;
+
+  max-width: 341px;
+
+  &__search {
+    display: flex;
+
+    min-height: 22px;
+
+    background-color: $color-floral-white;
+
+    & label {
+      display: flex;
+      width: 100%;
+
+      margin-left: 0.6rem;
+
+      position: relative;
+
+      &::before {
+        content: "";
+
+        display: block;
+
+        width: 12px;
+        height: 12px;
+
+        background-image: url("../img/sprite/icon-search.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+
+        top: 0.45rem;
+        left: -0.5rem;
+      }
+    }
+
+    input {
+      color: $color-nobel;
+      background: none;
+      border: none;
+
+      width: 100%;
+      padding: 0.25rem 0.5rem;
+
+      outline: none;
+    }
+  }
+}

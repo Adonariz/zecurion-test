@@ -1,0 +1,41 @@
+.breadcrumbs {
+  background-color: $color-white-smoke;
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+
+    padding-left: 3.5rem;
+
+    & li {
+      margin-right: 1rem;
+      position: relative;
+
+      color: $color-raven;
+
+      &:not(:last-child)::after {
+        content: "";
+
+        display: block;
+
+        width: 5px;
+        height: 9px;
+
+        background-image: url("../img/sprite/icon-tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+
+        right: -0.7rem;
+        top: 0.3rem;
+      }
+    }
+  }
+
+  & a[href] {
+    color: $color-pacific-blue;
+  }
+}

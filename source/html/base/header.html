@@ -1,0 +1,24 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="container">
+    @@if (!context.index) {
+      <a class="header__logo" href="index.html" aria-label="Переход на главную">
+        <img src="./img/svg/logo.svg" alt="Логотип компании Zecurion" width="230" height="51">
+      </a>
+    }
+    @@if (context.index) {
+      <span class="header__logo">
+        <img src="./img/svg/logo.svg" alt="Логотип компании Zecurion" width="230" height="51">
+      </span>
+    }
+
+    <div class="header__user-nav">
+      <a href="#" class="header__user">
+        <img src="./img/svg/avatar-default.svg" alt="Аватар пользователя" width="32" height="32">
+        Имя Фамилия
+      </a>
+      <a href="#" class="header__logout">
+        Выйти из аккаунта
+      </a>
+    </div>
+  </div>
+</header>
