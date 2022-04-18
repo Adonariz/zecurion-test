@@ -33,6 +33,10 @@
     & svg {
       margin-right: 0.3rem;
     }
+
+    @include vp-1279 {
+      grid-column: 3;
+    }
   }
 
   &__employee-wrapper {
@@ -41,6 +45,13 @@
     column-gap: 6%;
     grid-template-rows: auto auto auto;
     row-gap: 1.2rem;
+
+    @include vp-1279 {
+      grid-template-columns: auto auto auto;
+      column-gap: 4%;
+      grid-template-rows: auto auto;
+      row-gap: 1rem;
+    }
   }
 
   &__employee {
@@ -51,6 +62,10 @@
 
     grid-column: 1;
     grid-row: 1 / -1;
+
+    @include vp-1279 {
+      grid-row: 1;
+    }
   }
 
   &__employee-avatar {
@@ -90,6 +105,8 @@
     line-height: 34px;
     font-weight: 600;
 
+    position: relative;
+
     &::after {
       content: "";
 
@@ -126,6 +143,12 @@
     & span {
       color: $color-eclipse;
     }
+
+    @include vp-1279 {
+      align-self: center;
+      grid-row: 2;
+      grid-column: 1;
+    }
   }
 
   &__highlights {
@@ -136,6 +159,12 @@
     grid-row: 2 / -1;
 
     align-items: center;
+
+    @include vp-1279 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column: 1/-1;
+      grid-row: 3/-1;
+    }
   }
 
   &__highlights-list-item {
@@ -158,6 +187,10 @@
 
     &:not(:first-child) {
       padding-left: 17%;
+
+      @include vp-1439 {
+        padding-left: 10%;
+      }
     }
   }
 
@@ -305,8 +338,15 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 6%;
 
+      padding-bottom: 3em;
+
       @include vp-1439 {
         column-gap: 2%;
+      }
+
+      @include vp-1279 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
       }
     }
   }
@@ -392,6 +432,12 @@
 
       &:not(:first-child) {
         text-align: center;
+      }
+
+      @include vp-1279 {
+        &:not(:first-child) {
+          text-align: left;
+        }
       }
     }
 
