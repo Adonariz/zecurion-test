@@ -1,0 +1,50 @@
+.table-discipline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & th {
+    width: 90px;
+
+    &:not(:first-child) {
+      text-align: center;
+    }
+
+    @include vp-1279 {
+      &:not(:first-child) {
+        text-align: left;
+      }
+    }
+  }
+
+  & td {
+    &:not(:first-child) {
+      text-align: center;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+    }
+
+    & span {
+      font-size: 10px;
+      white-space: nowrap;
+      margin-left: 0.3rem;
+    }
+
+    border-bottom: 1px solid $color-fog;
+  }
+
+  &__delta {
+    &--dec {
+      color: $color-razzmatazz;
+    }
+
+    &--inc {
+      color: $color-pigment-green;
+    }
+  }
+}
+
+

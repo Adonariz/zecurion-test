@@ -1,0 +1,21 @@
+.key-indicators {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+
+  & h2 {
+    margin-bottom: 0.5rem;
+  }
+
+
+  &__no-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 195px;
+    width: 100%;
+
+    color: $color-nobel;
+    background-color: $color-white-smoke;
+  }
+}

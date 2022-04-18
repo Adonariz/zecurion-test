@@ -260,76 +260,11 @@
     }
   }
 
-  &__anomalies {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-
   &__title {
     font-size: 16px;
     font-weight: 400;
     color: $color-matterhorn;
     text-transform: uppercase;
-  }
-
-  &__anomalies-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 404px));
-    column-gap: 1.3rem;
-
-    color: $color-eclipse;
-
-    & li {
-      display: flex;
-      align-items: center;
-
-      padding-top: 1.2rem;
-      padding-right: 1.2rem;
-      padding-bottom: 1.2rem;
-      padding-left: 2.4rem;
-
-      border: 1px solid $color-razzmatazz;
-
-      position: relative;
-
-      &::before {
-        content: "";
-
-        display: block;
-
-        width: 15px;
-        height: 15px;
-
-        background-image: url("../img/sprite/icon-danger.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-
-        position: absolute;
-        left: 0.7rem;
-        top: calc(50% - 15px / 2);
-      }
-    }
-  }
-
-  &__key-indicators {
-    padding-top: 2em;
-    padding-bottom: 0.5em;
-
-    & h2 {
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  &__no-data {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 195px;
-    width: 100%;
-
-    color: $color-nobel;
-    background-color: $color-white-smoke;
   }
 
   &__statistics {
@@ -375,103 +310,6 @@
     & td {
       color: $color-eclipse;
       padding: 0.3em;
-    }
-  }
-
-  &__categories {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    & th {
-      &:not(:first-child) {
-        text-align: right;
-        text-transform: lowercase;
-      }
-    }
-
-    & td {
-      padding: 0.3em;
-
-      &:first-child span {
-        display: block;
-        max-width: 220px;
-        padding-left: 1.2rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        @include vp-1023 {
-          max-width: 200px;
-        }
-      }
-
-      &:not(:first-child) {
-        text-align: right;
-      }
-
-      &:nth-child(2) {
-        color: $color-pacific-blue;
-      }
-    }
-
-    & tr {
-      & td {
-        border-top: 1px solid $color-fog;
-      }
-
-      &:last-child td {
-        border-bottom: 1px solid $color-fog;
-      }
-    }
-  }
-
-  &__discipline {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    & th {
-      width: 90px;
-
-      &:not(:first-child) {
-        text-align: center;
-      }
-
-      @include vp-1279 {
-        &:not(:first-child) {
-          text-align: left;
-        }
-      }
-    }
-
-    & td {
-      &:not(:first-child) {
-        text-align: center;
-      }
-
-      & div {
-        display: flex;
-        align-items: center;
-      }
-
-      & span {
-        font-size: 10px;
-        white-space: nowrap;
-        margin-left: 0.3rem;
-      }
-
-      border-bottom: 1px solid $color-fog;
-    }
-  }
-
-  &__delta {
-    &--dec {
-      color: $color-razzmatazz;
-    }
-
-    &--inc {
-      color: $color-pigment-green;
     }
   }
 }

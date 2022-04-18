@@ -1,0 +1,43 @@
+.anomalies {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 404px));
+    column-gap: 1.3rem;
+
+    color: $color-eclipse;
+
+    & li {
+      display: flex;
+      align-items: center;
+
+      padding-top: 1.2rem;
+      padding-right: 1.2rem;
+      padding-bottom: 1.2rem;
+      padding-left: 2.4rem;
+
+      border: 1px solid $color-razzmatazz;
+
+      position: relative;
+
+      &::before {
+        content: "";
+
+        display: block;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url("../img/sprite/icon-danger.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+        left: 0.7rem;
+        top: calc(50% - 15px / 2);
+      }
+    }
+  }
+}

@@ -837,6 +837,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .employees__employee-wrapper img {
@@ -1176,80 +1177,11 @@ button,
   margin-right: 0.7rem;
 }
 
-.performance__anomalies {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
 .performance__title {
   font-size: 16px;
   font-weight: 400;
   color: #4d4d4d;
   text-transform: uppercase;
-}
-
-.performance__anomalies-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(auto, 404px))[3];
-  grid-template-columns: repeat(3, minmax(auto, 404px));
-  -webkit-column-gap: 1.3rem;
-  -moz-column-gap: 1.3rem;
-  column-gap: 1.3rem;
-  color: #3e3e3e;
-}
-
-.performance__anomalies-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 1.2rem;
-  padding-right: 1.2rem;
-  padding-bottom: 1.2rem;
-  padding-left: 2.4rem;
-  border: 1px solid #ee144e;
-  position: relative;
-}
-
-.performance__anomalies-list li::before {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-image: url("../img/sprite/icon-danger.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  left: 0.7rem;
-  top: calc(50% - 15px / 2);
-}
-
-.performance__key-indicators {
-  padding-top: 2em;
-  padding-bottom: 0.5em;
-}
-
-.performance__key-indicators h2 {
-  margin-bottom: 0.5rem;
-}
-
-.performance__no-data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 195px;
-  width: 100%;
-  color: #999999;
-  background-color: #f3f2f2;
 }
 
 .performance__statistics .container {
@@ -1284,7 +1216,76 @@ button,
   padding: 0.3em;
 }
 
-.performance__categories {
+.anomalies {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.anomalies__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, 404px))[3];
+  grid-template-columns: repeat(3, minmax(auto, 404px));
+  -webkit-column-gap: 1.3rem;
+  -moz-column-gap: 1.3rem;
+  column-gap: 1.3rem;
+  color: #3e3e3e;
+}
+
+.anomalies__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 2.4rem;
+  border: 1px solid #ee144e;
+  position: relative;
+}
+
+.anomalies__list li::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/sprite/icon-danger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0.7rem;
+  top: calc(50% - 15px / 2);
+}
+
+.key-indicators {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+}
+
+.key-indicators h2 {
+  margin-bottom: 0.5rem;
+}
+
+.key-indicators__no-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 195px;
+  width: 100%;
+  color: #999999;
+  background-color: #f3f2f2;
+}
+
+.table-categories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1297,16 +1298,17 @@ button,
   justify-content: space-between;
 }
 
-.performance__categories th:not(:first-child) {
+.table-categories th:not(:first-child) {
   text-align: right;
   text-transform: lowercase;
 }
 
-.performance__categories td {
+.table-categories td {
   padding: 0.3em;
+  position: relative;
 }
 
-.performance__categories td:first-child span {
+.table-categories td:first-child span {
   display: block;
   max-width: 220px;
   padding-left: 1.2rem;
@@ -1316,23 +1318,41 @@ button,
   white-space: nowrap;
 }
 
-.performance__categories td:not(:first-child) {
+.table-categories td:not(:first-child) {
   text-align: right;
 }
 
-.performance__categories td:nth-child(2) {
+.table-categories td:nth-child(2) {
   color: #058dc7;
 }
 
-.performance__categories tr td {
+.table-categories tr td {
   border-top: 1px solid #d1cfd7;
 }
 
-.performance__categories tr:last-child td {
+.table-categories tr:last-child td {
   border-bottom: 1px solid #d1cfd7;
 }
 
-.performance__discipline {
+.table-categories__category::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 10px / 2);
+  left: 0.2rem;
+}
+
+.table-categories__category--yellow::before {
+  background-color: #f8d77f;
+}
+
+.table-categories__category--red::before {
+  background-color: #f689a8;
+}
+
+.table-discipline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1345,23 +1365,23 @@ button,
   justify-content: space-between;
 }
 
-.performance__discipline th {
+.table-discipline th {
   width: 90px;
 }
 
-.performance__discipline th:not(:first-child) {
+.table-discipline th:not(:first-child) {
   text-align: center;
 }
 
-.performance__discipline td {
+.table-discipline td {
   border-bottom: 1px solid #d1cfd7;
 }
 
-.performance__discipline td:not(:first-child) {
+.table-discipline td:not(:first-child) {
   text-align: center;
 }
 
-.performance__discipline td div {
+.table-discipline td div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1370,26 +1390,19 @@ button,
   align-items: center;
 }
 
-.performance__discipline td span {
+.table-discipline td span {
   font-size: 10px;
   white-space: nowrap;
   margin-left: 0.3rem;
 }
 
-.performance__delta--dec {
+.table-discipline__delta--dec {
   color: #ee144e;
 }
 
-.performance__delta--inc {
+.table-discipline__delta--inc {
   color: #00983e;
 }
-
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
 
 @media (max-width: 1439px) {
   .container {
@@ -1459,7 +1472,7 @@ button,
     gap: 5%;
   }
 
-  .performance__discipline th:not(:first-child) {
+  .table-discipline th:not(:first-child) {
     text-align: left;
   }
 }
@@ -1481,7 +1494,7 @@ button,
     gap: 2%;
   }
 
-  .performance__categories td:first-child span {
+  .table-categories td:first-child span {
     max-width: 200px;
   }
 }
