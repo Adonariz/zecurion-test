@@ -78,7 +78,8 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="">
+      <h1 class="visually-hidden">Информация о сотруднике</h1>
       <div class="breadcrumbs">
         <ul class="container text breadcrumbs__list list-reset">
           <li>
@@ -89,7 +90,7 @@
           </li>
         </ul>
       </div>
-      <div class="row">
+      <div class="row container container--no-padding">
         <aside class="employees">
           <div class="employees__search">
             <div class="container">
@@ -98,7 +99,253 @@
               </label>
             </div>
           </div>
+          <ul class="employees__list list-reset column text">
+            <li class="employees__list-item container">
+              <div class="employees__employee-wrapper">
+                <img src="./img/content/avatar-02.jpg" alt="Аватар пользователя" width="50" height="50">
+                <div class="employees__data-wrapper">
+                  <div class="employees__name">Анна Иванова</div>
+                  <div class="employees__position">Менеджер, Отдел продаж</div>
+                  <div class="employees__status employees__status--red">На увольнении</div>
+                </div>
+                <div class="employees__rating">12</div>
+              </div>
+            </li>
+            <li class="employees__list-item employees__list-item--active employees__list-item--seen container">
+              <div class="employees__employee-wrapper">
+                <img src="./img/content/avatar-01.jpg" alt="Аватар пользователя" width="50" height="50">
+                <div class="employees__data-wrapper">
+                  <div class="employees__name">Виктория Беляева</div>
+                  <div class="employees__position">Менеджер, Отдел продаж</div>
+                  <div class="employees__status employees__status--green">В отпуске</div>
+                </div>
+                <div class="employees__rating employees__rating--red">247</div>
+              </div>
+            </li>
+            <li class="employees__list-item container">
+              <div class="employees__employee-wrapper">
+                <img src="./img/content/avatar-03.jpg" alt="Аватар пользователя" width="50" height="50">
+                <div class="employees__data-wrapper">
+                  <div class="employees__name">Виктор Сурков</div>
+                  <div class="employees__position">Менеджер, Отдел продаж</div>
+                </div>
+                <div class="employees__rating">0</div>
+              </div>
+            </li>
+          </ul>
         </aside>
+        <section class="performance">
+          <div class="performance__general">
+            <h2 class="visually-hidden">Общая информация о сотруднике</h2>
+            <div class="container">
+              <a href="#" class="performance__link">
+                <svg width="12" height="6" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+                К списку сотрудников
+              </a>
+              <div class="performance__employee-wrapper">
+                <div class="performance__employee">
+                  <div class="performance__employee-avatar">
+                    <img src="./img/content/avatar-01.jpg" alt="Аватар пользователя" width="57" height="57">
+                  </div>
+                  <div class="performance__data">
+                    <div class="performance__name">Виктория Беляева</div>
+                    <div class="performance__position">Менеджер, Отдел продаж</div>
+                  </div>
+                </div>
+                <div class="performance__activity">
+                  Последняя активность <span>сегодня в 12.22</span>
+                </div>
+                <ul class="performance__highlights list-reset">
+                  <li class="performance__highlights-list-item">
+                    <div class="performance__highlights-title">Уровень риска</div>
+                    <div class="performance__highlights-data">157 <span class="performance__highlights-data-change performance__highlights-data-change--dec">-100%</span></div>
+                  </li>
+                  <li class="performance__highlights-list-item">
+                    <div class="performance__highlights-title">Продуктивность</div>
+                    <div class="performance__highlights-data">86% <span class="performance__highlights-data-change performance__highlights-data-change--inc">+3%</span></div>
+                  </li class="performance__highlights-list-item">
+                  <li class="performance__highlights-list-item">
+                    <div class="performance__highlights-title">Индекс активности</div>
+                    <div class="performance__highlights-data">2.4% <span class="performance__highlights-data-change performance__highlights-data-change--inc">+14%</span></div>
+                  </li>
+                  <li class="performance__highlights-list-item">
+                    <div class="performance__highlights-contacts">
+                      <a href="#">
+                        <svg width="17" height="16" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-checkbox"></use>
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg width="19" height="13" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-video"></use>
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg width="22" height="18" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-screen"></use>
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg width="21" height="19" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="performance__anomalies">
+            <div class="container">
+              <h2 class="performance__title">Аномалии</h2>
+              <ul class="performance__anomalies-list list-reset">
+                <li class="performance__anomalies-list-item">
+                  Использование более одного аккаунта в соцсетях или мессенджерах
+                </li>
+                <li class="performance__anomalies-list-item">
+                  Первое использование устройства
+                </li>
+                <li class="performance__anomalies-list-item">
+                  Отсутствие более 40 дней
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="performance__key-indicators">
+            <div class="container">
+              <h2 class="performance__title">Основные показатели</h2>
+              <div class="performance__key-indicators-wrapper">
+                <div class="performance__no-data">
+                  Данные не найдены
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="performance__statistics">
+            <div class="container">
+              <div class="performance__categories performance__categories--apps">
+                <h2 class="performance__title">Приложения и категории</h2>
+                <div class="performance__table-wrapper">
+                  <table>
+                    <thead>
+                      <th>Категории приложений</th>
+                      <th>Время</th>
+                      <th>%</th>
+                      <th>Рост</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="performance__category performance__category--yellow">Мессенджеры</span></td>
+                        <td>20:55</td>
+                        <td>18</td>
+                        <td>+2%</td>
+                      </tr>
+                      <tr>
+                        <td><span class="performance__category performance__category--yellow">Браузеры</span></td>
+                        <td>15:11</td>
+                        <td>12</td>
+                        <td>-3%</td>
+                      </tr>
+                      <tr>
+                        <td><span class="performance__category performance__category--red">Браузеры</span></td>
+                        <td>13:11</td>
+                        <td>7</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="performance__categories performance__categories--sites">
+                <h2 class="performance__title">Сайты и категории</h2>
+                <div class="performance__table-wrapper">
+                  <table>
+                    <thead>
+                      <th>Категории сайтов</th>
+                      <th>Время</th>
+                      <th>%</th>
+                      <th>Рост</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="performance__category performance__category--yellow">Поисковики</span></td>
+                        <td>20:55</td>
+                        <td>18</td>
+                        <td>+2%</td>
+                      </tr>
+                      <tr>
+                        <td><span class="performance__category performance__category--yellow">Новостные порталы</span></td>
+                        <td>15:11</td>
+                        <td>12</td>
+                        <td>-3%</td>
+                      </tr>
+                      <tr>
+                        <td><span class="performance__category performance__category--red">Сайты с неопределенным наполнением</span></td>
+                        <td>13:11</td>
+                        <td>7</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="performance__discipline">
+                <h2 class="performance__title">Дисциплина</h2>
+                <div class="performance__table-wrapper">
+                  <table>
+                    <thead>
+                      <th>Дата</th>
+                      <th>Приход на&nbsp;работу</th>
+                      <th>Уход с&nbsp;работы</th>
+                      <th>Время на&nbsp;работе</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>29.02</td>
+                        <td>
+                          <div class="performance__time">08:46 <span class="performance__delta performance__delta--dec">+16 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:46 <span class="performance__delta performance__delta--dec">+16 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:36 <span class="performance__delta performance__delta--inc">+6 мин</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>28.02</td>
+                        <td>
+                          <div class="performance__time">08:27 <span class="performance__delta performance__delta--inc">-3 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:27 <span class="performance__delta performance__delta--inc">-3 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:36 <span class="performance__delta performance__delta--dec">-24 мин</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>25.02</td>
+                        <td>
+                          <div class="performance__time">08:42 <span class="performance__delta performance__delta--dec">+12 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:42 <span class="performance__delta performance__delta--dec">+12 мин</span></div>
+                        </td>
+                        <td>
+                          <div class="performance__time">08:36 <span class="performance__delta performance__delta--dec">-24 мин</span></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </div>

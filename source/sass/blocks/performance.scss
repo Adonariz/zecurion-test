@@ -1,0 +1,253 @@
+.performance {
+  &__general {
+    border-bottom: 2px solid $color-whisper;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    color: $color-pacific-blue;
+    text-transform: lowercase;
+  }
+
+  &__employee-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  &__employee {
+    display: flex;
+    position: relative;
+
+    grid-column: 1;
+    grid-row: 1 / -1;
+
+    &::after {
+      content: "";
+
+      display: block;
+
+      width: 16px;
+      height: 11px;
+
+      background-image: url("../img/sprite/icon-eye.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__employee-avatar {
+    position: relative;
+
+    & img {
+      width: 57px;
+      height: 57px;
+
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+
+      width: 17px;
+      height: 17px;
+
+      background-image: url("../img/sprite/icon-smile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__name {
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 600;
+  }
+
+  &__position {
+    color: $color-grey;
+  }
+
+  &__activity {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &__highlights {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2;
+    grid-row: 2;
+    column-gap: 0.5rem;
+
+    align-items: center;
+  }
+
+  &__highlights-contacts {
+    margin-left: auto;
+  }
+
+  &__title {
+    font-weight: 400;
+    color: $color-matterhorn;
+    text-transform: uppercase;
+  }
+
+  &__anomalies-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+
+    color: $color-eclipse;
+
+    & li {
+      display: flex;
+      align-items: center;
+
+      padding-left: 2rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      border: 1px solid $color-razzmatazz;
+
+      position: relative;
+
+      &::before {
+        content: "";
+
+        display: block;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url("../img/sprite/icon-danger.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+        left: 0;
+        top: calc(50% - 15px / 2);
+      }
+    }
+  }
+
+  &__no-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 195px;
+    width: 100%;
+
+    color: $color-nobel;
+    background-color: $color-white-smoke;
+  }
+
+  &__statistics {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // column-gap: 5%;
+    }
+  }
+
+  &__table-wrapper {
+    & table {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 354px;
+      border-collapse: collapse;
+    }
+
+    & th {
+      color: $color-manatee;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    & td {
+      color: $color-eclipse;
+    }
+  }
+
+  &__categories {
+    & th {
+      &:not(:first-child) {
+        text-align: right;
+        text-transform: lowercase;
+      }
+    }
+
+    & td {
+      &:first-child span {
+        display: block;
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:not(:first-child) {
+        text-align: right;
+      }
+
+      &:nth-child(2) {
+        color: $color-pacific-blue;
+      }
+    }
+
+    & tr {
+      & td {
+        border-top: 1px solid $color-fog;
+      }
+
+      &:last-child td {
+        border-bottom: 1px solid $color-fog;
+      }
+    }
+  }
+
+  &__discipline {
+    & table {
+
+    }
+
+    & th {
+      text-align: center;
+    }
+
+    & td {
+      & div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      & span {
+        font-size: 10px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

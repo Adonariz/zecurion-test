@@ -3,6 +3,10 @@
     display: flex;
   }
 
+  &__logo {
+    margin-left: -22px;
+  }
+
   &__user-nav {
     display: flex;
     align-items: center;
@@ -14,11 +18,15 @@
     display: flex;
     align-items: center;
 
+    font-size: 13px;
+    line-height: 18px;
+
     & img {
       width: 32px;
       height: 32px;
 
       object-fit: contain;
+      border-radius: 50%;
 
       margin-right: 0.75rem;
     }

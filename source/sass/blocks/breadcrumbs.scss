@@ -7,10 +7,8 @@
 
     min-height: 48px;
 
-    padding-left: 3.5rem;
-
     & li {
-      margin-right: 1rem;
+      margin-right: 0.7rem;
       position: relative;
 
       color: $color-raven;
@@ -29,7 +27,7 @@
 
         position: absolute;
 
-        right: -0.7rem;
+        right: -0.5rem;
         top: 0.3rem;
       }
     }
