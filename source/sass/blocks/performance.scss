@@ -304,6 +304,10 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 6%;
+
+      @include vp-1439 {
+        column-gap: 2%;
+      }
     }
   }
 
@@ -320,11 +324,13 @@
       font-weight: 600;
       text-align: left;
       padding-bottom: 0.3rem;
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
     }
 
     & td {
       color: $color-eclipse;
-      padding: 0.2em;
+      padding: 0.3em;
     }
   }
 
@@ -342,18 +348,10 @@
       &:first-child {
         width: 180px;
       }
-
-      &:nth-child(2) {
-        width: 50px;
-      }
-
-      &:nth-child(3) {
-        width: 48px;
-      }
     }
 
     & td {
-      padding: 0.2em;
+      padding: 0.3em;
 
       &:first-child span {
         display: block;

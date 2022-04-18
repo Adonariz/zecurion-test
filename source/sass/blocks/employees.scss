@@ -8,6 +8,10 @@
 
   border-right: 1px solid $color-whisper;
 
+  @include vp-1439 {
+    width: 301px;
+  }
+
   &__search {
     display: flex;
 
@@ -106,6 +110,7 @@
 
     max-width: 170px;
     margin-left: 0.6rem;
+    padding-right: 0.5rem;
   }
 
   &__name {
