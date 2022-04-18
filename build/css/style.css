@@ -1302,10 +1302,6 @@ button,
   text-transform: lowercase;
 }
 
-.performance__categories th:first-child {
-  width: 180px;
-}
-
 .performance__categories td {
   padding: 0.3em;
 }
@@ -1470,15 +1466,27 @@ button,
 
 @media (max-width: 1023px) {
   .container {
-    padding: 0 12px 0 16px;
+    padding: 0 16px 0 16px;
   }
 
   .container--no-padding {
     padding: 0;
   }
+
+  .employees {
+    width: 291px;
+  }
+
+  .performance__statistics .container {
+    gap: 2%;
+  }
+
+  .performance__categories td:first-child span {
+    max-width: 200px;
+  }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 949px) {
   .employees {
     width: 0;
     visibility: hidden;

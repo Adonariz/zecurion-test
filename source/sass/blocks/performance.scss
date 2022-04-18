@@ -348,6 +348,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 5%;
       }
+
+      @include vp-1023 {
+        gap: 2%;
+      }
     }
   }
 
@@ -384,10 +388,6 @@
         text-align: right;
         text-transform: lowercase;
       }
-
-      &:first-child {
-        width: 180px;
-      }
     }
 
     & td {
@@ -400,6 +400,10 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+
+        @include vp-1023 {
+          max-width: 200px;
+        }
       }
 
       &:not(:first-child) {

@@ -12,6 +12,15 @@
     width: 301px;
   }
 
+  @include vp-1023 {
+    width: 291px;
+  }
+
+  @media (max-width: 949px) {
+    width: 0;
+    visibility: hidden;
+  }
+
   &__search {
     display: flex;
 
@@ -190,10 +199,5 @@
     &::before {
       display: none;
     }
-  }
-
-  @media (max-width: 950px) {
-    width: 0;
-    visibility: hidden;
   }
 }
